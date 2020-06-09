@@ -1,7 +1,8 @@
-import { Flex, Badge, Heading, Text } from '@chakra-ui/core';
+import { Box, Flex, Badge, Heading, Text } from '@chakra-ui/core';
 
 import { OnePagerData } from '../model/model';
 import { ContentCard } from './ContentCard';
+import {TwitterTimelineEmbed, TwitterShareButton} from 'react-twitter-embed'
 
 type OnePagerOverviewProps = {
   onePagerData: OnePagerData;
@@ -35,7 +36,13 @@ export const OnePagerOverview = ({
           );
         })}
       </Flex>
+      
       <Text fontSize='sm'>{onePagerData.detailDescription}</Text>
-    </ContentCard>
+      <TwitterTimelineEmbed
+      sourceType="profile"
+      screenName = {onePagerData.twitterName}
+      options={{height: 300}}
+      />
+      </ContentCard>
   );
 };

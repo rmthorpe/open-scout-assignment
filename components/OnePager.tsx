@@ -12,6 +12,8 @@ import { OnePagerOverview } from './OnePagerOverview';
 import { OnePagerFounders } from './OnePagerFounders';
 import { OnePagerFinances } from './OnePagerFinances';
 import { OnePagerVideo } from './OnePagerVideo';
+import { OnePagerInvestors } from './OnePagerInvestors';
+import { OnePagerFAQ } from './OnePagerFAQ';
 
 /** Renders a full one pager based on the onePagerUrl. */
 export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
@@ -45,14 +47,29 @@ export const OnePager = ({ onePagerUrl }: { onePagerUrl: string }) => {
       <OnePagerFounders onePagerData={onePagerData} isLoading={isLoading} />
 
       <Diveder50 />
+      
+      {/* Create Investors Card */}
+      <OnePagerInvestors onePagerData={onePagerData} isLoading={isLoading} />
+      <Diveder50 />
 
       <OnePagerFinances onePagerData={onePagerData} isLoading={isLoading} />
 
       <Diveder50 />
 
-      <OnePagerVideo onePagerData={onePagerData} isLoading={isLoading} />
+      {/* Check if there is a video link. If not, do not render OnePagerVideo Card. If so, render OnePagerVideo Card. Maintains
+      Diveder50 styling. */}
+      <div>
+        {onePagerData.pitchVideoLink != null ? 
+          <OnePagerVideo onePagerData={onePagerData} isLoading={isLoading} /> : ''}
+        {onePagerData.pitchVideoLink != null ? <Diveder50 /> : ''}
+      </div>
 
+      <OnePagerFAQ onePagerData={onePagerData} isLoading={isLoading} />
       <Diveder50 />
+
+ 
+
+      
 
       <ContentCard isLoading={false}>
         <Flex justifyContent='center'>

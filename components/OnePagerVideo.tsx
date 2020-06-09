@@ -13,6 +13,7 @@ export const OnePagerVideo = ({
   onePagerData,
   isLoading,
 }: OnePagerVideoProps) => {
+  console.log(onePagerData.pitchVideoLink)
   return (
     <ContentCard title='Pitch Video' isLoading={isLoading}>
       <Heading as='h2' size='md' marginRight='10px'>

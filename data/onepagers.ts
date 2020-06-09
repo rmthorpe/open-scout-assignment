@@ -26,6 +26,8 @@ const facebook: OnePagerData = {
   founders: [founders.facebook1, founders.facebook2, founders.facebook3],
   pitchVideoLink: 'https://www.youtube.com/watch?v=WzgNAN3dW-I',
   investors: [investors.investor2],
+  recent_faq: ["What percent of the company do you own?"],
+  twitterName: 'Facebook',
 };
 
 const lendingClub: OnePagerData = {
@@ -41,9 +43,11 @@ const lendingClub: OnePagerData = {
   fundraisingDetails: 'Expand capabilities and accelerate customer growth',
   founders: [founders.lendingClub1, founders.lendingClub2],
   investors: [investors.investor1],
+  recent_faq: ['Who is your target market?', 'What is your revenue to date?', 'Where are you based?'],
+  twitterName: 'LendingClub',
 };
 
-const spotify: OnePagerData = {
+var spotify: OnePagerData = {
   companyName: 'Spotify',
   url: 'spotify',
   industryTags: ['music', 'streaming'],
@@ -57,9 +61,11 @@ const spotify: OnePagerData = {
   founders: [founders.spotify1, founders.spotify2],
   pitchVideoLink: 'https://www.youtube.com/watch?v=ZDXETBfXSuc&t=166s',
   investors: [investors.investor1],
+  recent_faq: [],
+  twitterName: 'Spotify',
 };
 
-const workday: OnePagerData = {
+var workday: OnePagerData = {
   companyName: 'Workday',
   url: 'workday',
   industryTags: ['SaaS', 'HR', 'Software'],
@@ -72,9 +78,11 @@ const workday: OnePagerData = {
   fundraisingDetails: 'Develop software platform',
   founders: [founders.workday1, founders.workday2],
   investors: [investors.investor1, investors.investor2],
+  recent_faq: ['Who are your investors?', 'What are your largest overhead expenses?'],
+  twitterName: 'Workday',
 };
 
-const zynga: OnePagerData = {
+var zynga: OnePagerData = {
   companyName: 'Zynga',
   url: 'zynga',
   industryTags: ['Gaming', 'Mobile'],
@@ -88,6 +96,8 @@ const zynga: OnePagerData = {
   founders: [founders.zynga1, founders.zynga2, founders.zynga3],
   pitchVideoLink: 'https://www.youtube.com/watch?v=HdVWHAPiqno',
   investors: [investors.investor1, investors.investor3],
+  recent_faq: ['Who are your investors?'],
+  twitterName: 'Zynga',
 };
 
 /** Map of urls to full one pager data. */

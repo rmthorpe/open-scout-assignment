@@ -27,4 +27,6 @@ export interface OnePagerData {
   fundraisingDetails?: string;
   pitchVideoLink?: string;
   investors?: OnePagerPerson[];
+  recent_faq?: string[];
+  twitterName?: string;
 }
